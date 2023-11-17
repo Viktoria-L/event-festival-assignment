@@ -1,0 +1,99 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "activity": "Music",
+      "image":"url",
+      "description": "En mängd olika musikgenrer från rock till elektronisk dansmusik.",
+      "items": [
+        { 
+          "id": 1,
+          "type": "artist",
+          "image":"url",
+          "name": "Artist Namn",
+          "genre": "Rock",
+          "performanceDate": "2023-06-12"
+        },
+        {
+          "id": 2,
+          "type": "artist",
+          "image":"url",
+          "name": "Artist Namn 2",
+          "genre": "EDM",
+          "performanceDate": "2023-06-13"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "activity": "Art",
+      "description": "Utställningar av lokala och internationella konstnärer.",
+      "items":{}
+    },
+    {
+      "id": 3,
+      "activity": "Yoga",
+      "description": "Yogaklasser och workshops under festivalen.",
+      "items":{}
+    },
+    {
+      "id": 4,
+      "activity": "Mat",
+      "description": "Ett brett utbud av mat från världens alla hörn.",
+      "items":{}
+    }
+  ],
+
+
+  "artists": [
+    {
+      "id": 1,
+      "name": "Artist Namn",
+      "genre": "Rock",
+      "performanceDate": "2023-06-12"
+    },
+    {
+      "id": 2,
+      "name": "Artist Namn 2",
+      "genre": "EDM",
+      "performanceDate": "2023-06-13"
+    }
+   
+  ],
+  "artExhibitor": [
+    {
+    "id": 1,
+    "name": "Name of Art Exhibition",
+    "image": "url"
+  }
+  ],
+
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Namn",
+      "style": "Hatha Yoga",
+      "classDate": "2023-06-12"
+    }
+   
+  ],
+  "chill": {
+    "title": "Chillax",
+    "description": "text om chillen",
+    "image":"url"
+  },
+  "foodStalls": [
+    {
+      "id": 1,
+      "name": "Matstånd Namn",
+      "cuisineType": "Italienskt",
+      "location": "Område A"
+    }
+    
+  ],
+
+
+  "tickets": [
+    
+  ]
+}
