@@ -1,28 +1,70 @@
-// import Header from "../components/ui/Header";
-// import { useState, useEffect, type ReactNode } from 'react';
-// import { IVehicle } from "../components/vehicle/IVehicle";
-// import { get } from "../components/utils/httpClient";
-// import Progress from "../components/ui/Progress";
-// //import ErrorMessage from "../components/ui/ErrorMessage";
-// import Vehicle from "../components/vehicle/Vehicle";
-// import { IVehiclesResponseType } from "../components/utils/IVehiclesResponseType";
-// import Alert from "../components/ui/alert";
-
-// // type VehicleResponseType = {
-// //   status: string;
-// //   statusCode: number;
-// //   items: number;
-// //   data: IVehicle[];
-// // }
-
+import { getData } from '../components/utils/httpClient';
+import { useEffect, useState, type ReactNode } from 'react';
+import { IActivity } from '../components/activities/IActivity';
+import { IActivitiesResponseType } from '../components/utils/IActivitiesResponseType';
 
 const Activities = () => {
+
+  const [activities, setActivities] = useState<IActivity[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string>();
+
+  useEffect(() => {
+   getActivities();
+  }, [])
+  
+
+  //Funktion för att hämta alla aktiviteter
+  const getActivities = async () => {
+    try {
+      setIsLoading(true);
+      const result = await getData<IActivitiesResponseType>('http://localhost:8080/api/activities')
+      setActivities(result.data);
+      console.log("result", result)
+
+    } catch (error) {
+      if(error instanceof Error){
+        setError(error.message);
+        console.log(error.message)
+      }
+    }
+    setIsLoading(false);
+
+  }
+
+
+  let content: ReactNode;
+  
+  if(activities){
+    content = (
+      <>
+      {activities.map((activity) => (<div key={activity.id}>
+        <h2>{activity.activity}</h2>
+      </div>))}
+      
+      </>
+      )
+  }
+  
+  if(isLoading){
+    // content = <Progress text="Hämtar bilar, vänta lite..."/>
+    content = <h2>Loading...</h2>;
+  }
+
+  if(error){
+    // content = <Alert mode="error">{error}</Alert>
+    content = <h2>{error}</h2>;
+  }
+
+
   return (
-    <div>Activities</div>
+    <main>
+    {content}
+    </main>
   )
 }
 
-export default Activities
+export default Activities;
 
 // const VehiclesPage = () => {
 // const [vehicles, setVechicles] = useState<IVehicle[]>([]);
