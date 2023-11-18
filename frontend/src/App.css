@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  
+  }
+  
+  html, body {
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+#root {
+      min-height: 100vh;
+      min-width: 345px;
+      margin: 0 auto;
+      font-family: Montserrat Alternates;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    

@@ -3,7 +3,6 @@
   z-index: 1;
   top: 0;
   opacity: 0.9;
-  background: #004d40;
   border-bottom: solid 1px var(--header-color);
 }
 
@@ -24,11 +23,6 @@ nav ul {
 
 nav ul li.logo {
   font-size: 1.6rem;
-}
-
-nav ul li.logo span {
-  color: #00796b;
-  /* color: #2196f3; */
 }
 
 nav ul li.toggle {
@@ -123,9 +117,9 @@ nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
     width: auto;
   }
 
-  nav ul li.logo {
+  /* nav ul li.logo {
     flex: 1;
-  }
+  } */
 
   nav ul li.toggle {
     display: none;

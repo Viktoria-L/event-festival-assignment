@@ -10,11 +10,14 @@ fortsätt bygga upp
 
 börja sen bygga sidorna, flytta ut fetchen från Home och gör en egen
 
-- uppdatera databasen så den blir fullständig
+- uppdatera databasen så den blir fullständig Klar
 - bygg home, navbar, header
 - activities
 - activityDetail
 - tickets page + ticket post 
+
+
+{/* Kanske lägga ikonen i mitten och ha meny på sidorna av den */}
 
 
 

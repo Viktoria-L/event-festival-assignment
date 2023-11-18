@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 
-html, body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-  }
-  #root {
-    min-height: 100%;
-    min-width: 345px;
-    margin: 0 auto;
-    font-family: Noto Sans;
-    line-height: 1.5;
-    font-weight: 400;
+@layer components {
+  .btn-primary {
+    @apply block w-full rounded bg-green-700 px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring active:bg-rose-500 sm:w-auto;
   }
   
+  .btn-secondary {
+    @apply block w-full rounded bg-black px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto;
+  }
+}
+
+
+@font-face {
+  font-family: "fontZ";
+  src: url(../src/assets/font/fontZ.otf);
+}
