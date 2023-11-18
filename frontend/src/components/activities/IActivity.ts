@@ -54,7 +54,11 @@ export interface Yoga extends ItemsBase {
 export interface Chill extends ItemsBase {
     type: 'chill';
     description: string;
-    image: string;
+}
+
+export interface Market extends ItemsBase {
+    type: 'market';
+    description: string;
 }
   
   // Unionstyp som representerar alla möjliga items-typer

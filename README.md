@@ -16,3 +16,5 @@ börja sen bygga sidorna, flytta ut fetchen från Home och gör en egen
 - activityDetail
 - tickets page + ticket post 
 
+
+

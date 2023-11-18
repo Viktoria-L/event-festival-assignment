@@ -3,97 +3,152 @@
     {
       "id": 1,
       "activity": "Music",
-      "image":"url",
-      "description": "En mängd olika musikgenrer från rock till elektronisk dansmusik.",
+      "image": "url",
+      "description": "A diverse range of music genres from techno to trance, featuring renowned artists from around the globe.",
       "items": [
-        { 
-          "id": 1,
-          "type": "artist",
-          "image":"url",
-          "name": "Artist Namn",
-          "genre": "Rock",
-          "performanceDate": "2023-06-12"
-        },
-        {
-          "id": 2,
-          "type": "artist",
-          "image":"url",
-          "name": "Artist Namn 2",
-          "genre": "EDM",
-          "performanceDate": "2023-06-13"
-        }
+        {"id": 1, "type": "artist", "image": "url", "name": "Eclipse Echo", "genre": "Techno", "performanceDate": "2023-06-12"},
+        {"id": 2, "type": "artist", "image": "url", "name": "Rhythm Pulse", "genre": "Techhouse", "performanceDate": "2023-06-13"},
+        {"id": 3, "type": "artist", "image": "url", "name": "Bass Voyager", "genre": "Trance", "performanceDate": "2023-06-14"},
+        {"id": 4, "type": "artist", "image": "url", "name": "Synth Harmonics", "genre": "Techno", "performanceDate": "2023-06-15"},
+        {"id": 5, "type": "artist", "image": "url", "name": "Melodic Waves", "genre": "Techhouse", "performanceDate": "2023-06-16"},
+        {"id": 6, "type": "artist", "image": "url", "name": "Beat Spectrum", "genre": "Trance", "performanceDate": "2023-06-17"},
+        {"id": 7, "type": "artist", "image": "url", "name": "Digital Mirage", "genre": "Techno", "performanceDate": "2023-06-18"},
+        {"id": 8, "type": "artist", "image": "url", "name": "Groove Matrix", "genre": "Techhouse", "performanceDate": "2023-06-19"},
+        {"id": 9, "type": "artist", "image": "url", "name": "Sonic Odyssey", "genre": "Trance", "performanceDate": "2023-06-20"},
+        {"id": 10, "type": "artist", "image": "url", "name": "Rave Synergy", "genre": "Techno", "performanceDate": "2023-06-21"}
       ]
     },
     {
       "id": 2,
       "activity": "Art",
-      "description": "Utställningar av lokala och internationella konstnärer.",
-      "items":{}
+      "image": "url",
+      "description": "Exhibitions of local and international artists, featuring a variety of contemporary artworks.",
+      "items": [
+        {"id": 1, "type": "art", "image": "url", "name": "Canvas Dreams", "style": "Abstract"},
+        {"id": 2, "type": "art", "image": "url", "name": "Color Rhythms", "style": "Modern"},
+        {"id": 3, "type": "art", "image": "url", "name": "Visionary Forms", "style": "Surrealist"},
+        {"id": 4, "type": "art", "image": "url", "name": "Sculptural Echoes", "style": "Installations"},
+        {"id": 5, "type": "art", "image": "url", "name": "Digital Mosaics", "style": "Digital Art"}
+      ]
     },
     {
       "id": 3,
       "activity": "Yoga",
-      "description": "Yogaklasser och workshops under festivalen.",
-      "items":{}
+      "image": "url",
+      "description": "Yoga classes and meditation sessions throughout the festival for spiritual rejuvenation.",
+      "items": [
+        {"id": 1, "type": "yoga", "image": "url", "name": "Sunrise Serenity", "style": "Vinyasa Yoga", "classDate": "2023-06-12"},
+        {"id": 2, "type": "yoga", "image": "url", "name": "Mindful Harmony", "style": "Hatha Yoga", "classDate": "2023-06-13"},
+        {"id": 3, "type": "yoga", "image": "url", "name": "Zen Echoes", "style": "Kundalini Yoga", "classDate": "2023-06-14"},
+        {"id": 4, "type": "yoga", "image": "url", "name": "Chakra Balance", "style": "Ashtanga Yoga", "classDate": "2023-06-15"},
+        {"id": 5, "type": "yoga", "image": "url", "name": "Inner Peace", "style": "Meditation", "classDate": "2023-06-16"}
+      ]
     },
     {
       "id": 4,
-      "activity": "Mat",
-      "description": "Ett brett utbud av mat från världens alla hörn.",
-      "items":{}
-    }
-  ],
-
-
-  "artists": [
-    {
-      "id": 1,
-      "name": "Artist Namn",
-      "genre": "Rock",
-      "performanceDate": "2023-06-12"
+      "activity": "Food",
+      "image": "url",
+      "description": "A wide variety of cuisine from around the world, catering to all taste preferences.",
+      "items": [
+        {"id": 1, "type": "food", "image": "url", "name": "Global Bites", "cuisine": "International"},
+        {"id": 2, "type": "food", "image": "url", "name": "Spice Trail", "cuisine": "Indian"},
+        {"id": 3, "type": "food", "image": "url", "name": "Taste of Italy", "cuisine": "Italian"},
+        {"id": 4, "type": "food", "image": "url", "name": "Sushi Fusion", "cuisine": "Japanese"},
+        {"id": 5, "type": "food", "image": "url", "name": "Green Garden", "cuisine": "Vegan"}
+      ]
     },
     {
-      "id": 2,
-      "name": "Artist Namn 2",
-      "genre": "EDM",
-      "performanceDate": "2023-06-13"
-    }
-   
-  ],
-  "artExhibitor": [
+      "id": 5,
+      "activity": "Market",
+      "image": "url",
+      "description": "Craft market with a variety of handmade products, from clothing to unique accessories.",
+      "items": {
+        "id": 1,
+        "type": "market",
+        "image": "url",
+        "name": "Artisan Wonders",
+        "description": "A collection of handcrafted items from local artisans."
+      }
+    },
     {
-    "id": 1,
-    "name": "Name of Art Exhibition",
-    "image": "url"
-  }
-  ],
-
-  "instructors": [
-    {
-      "id": 1,
-      "name": "Namn",
-      "style": "Hatha Yoga",
-      "classDate": "2023-06-12"
+      "id": 6,
+      "activity": "Chill",
+      "image": "url",
+      "description": "Serene chill areas for relaxation and socializing, nestled in nature.",
+      "items": {
+        "id": 1,
+        "type": "chill",
+        "image": "url",
+        "name": "Forest Retreat",
+        "description": "A tranquil spot amidst the trees for relaxation."
+      }
     }
-   
   ],
-  "chill": {
-    "title": "Chillax",
-    "description": "text om chillen",
-    "image":"url"
-  },
-  "foodStalls": [
-    {
-      "id": 1,
-      "name": "Matstånd Namn",
-      "cuisineType": "Italienskt",
-      "location": "Område A"
-    }
-    
-  ],
-
-
   "tickets": [
-    
+    {
+      "id": 1, 
+    "type": "General Admission", 
+    "price": "$100", 
+    "benefits": ["Access to all stages", "Standard camping spot"],
+    "ticketHolders": [
+      {
+        "ticketNumber": 1,
+        "name": "namn",
+        "email": "email"
+      }
+    ]
+  },
+    {
+      "id": 2, 
+    "type": "VIP", 
+    "price": "$250", 
+    "benefits": ["Premium stage access", "VIP camping area", "Exclusive lounge access"],
+    "ticketHolders": [
+      {
+        "ticketNumber": 1,
+        "name": "namn",
+        "email": "email"
+      }
+    ]
+  },
+    {
+      "id": 3, 
+    "type": "Day Pass", 
+    "price": "$50", 
+    "benefits": ["Single day access to all stages"],
+    "ticketHolders": [
+      {
+        "ticketNumber": 1,
+        "name": "namn",
+        "email": "email"
+      }
+    ]
+  },
+    {
+      "id": 4, 
+    "type": "Group Package", 
+    "price": "$400", 
+    "benefits": ["4 General Admission tickets", "Group camping spot"],
+    "ticketHolders": [
+      {
+        "ticketNumber": 1,
+        "name": "namn",
+        "email": "email"
+      }
+    ]
+  },
+    {
+      "id": 5, 
+    "type": "Wellness Package", 
+    "price": "$150", 
+    "benefits": ["Access to all stages", "Yoga and meditation sessions", "Healthy meal options"],
+    "ticketHolders": [
+      {
+        "ticketNumber": 1,
+        "name": "namn",
+        "email": "email"
+      }
+    ]
+  }
   ]
 }
