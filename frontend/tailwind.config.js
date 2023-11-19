@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      sacred: ["Sacred Geometry"],
       fontZ: ["fontZ"],
       montserrat: ["Montserrat Alternate"],
     },

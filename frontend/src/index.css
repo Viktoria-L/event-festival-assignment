@@ -5,12 +5,19 @@
 
 @layer components {
   .btn-primary {
-    @apply block w-full rounded bg-green-700 px-12 py-3 text-sm font-medium
+    @apply block w-full rounded bg-green-700 px-8 py-3 text-sm font-medium
      text-white shadow focus:outline-none focus:ring hover:bg-green-800 sm:w-auto;
   }
   
   .btn-secondary {
-    @apply block w-full rounded bg-black px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto;
+    @apply block w-full rounded bg-black bg-opacity-40 border-2 border-green-700 hover:bg-green-700 px-8 py-3 text-sm font-medium sm:w-auto;
+  }
+
+  .navLinkMD {
+    @apply py-5 px-3 text-white hover:text-green-500;
+  }
+  .navLinkSM {
+    @apply block py-2 px-4 text-sm text-white hover:text-green-500;
   }
 }
 

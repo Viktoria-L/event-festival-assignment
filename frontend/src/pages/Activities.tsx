@@ -2,6 +2,7 @@ import { getData } from '../components/utils/httpClient';
 import { useEffect, useState, type ReactNode } from 'react';
 import { IActivity } from '../components/activities/IActivity';
 import { IActivitiesResponseType } from '../components/utils/IActivitiesResponseType';
+import ActivityCard from '../components/activities/ActivityCard';
 
 const Activities = () => {
 
@@ -13,8 +14,6 @@ const Activities = () => {
    getActivities();
   }, [])
   
-
-  //Funktion för att hämta alla aktiviteter
   const getActivities = async () => {
     try {
       setIsLoading(true);
@@ -29,19 +28,21 @@ const Activities = () => {
       }
     }
     setIsLoading(false);
-
   }
-
 
   let content: ReactNode;
   
   if(activities){
     content = (
       <>
-      {activities.map((activity) => (<div key={activity.id}>
-        <h2>{activity.activity}</h2>
-      </div>))}
+      <h1 className='my-12 font-bold text-3xl text-center'>Program</h1>
+      <p className='text-center'>Here you can explore all the activities on the festival grounds.</p>
+      <div className='flex flex-wrap justify-center gap-8 my-12'>
+        {activities.map((activity) => 
+        <ActivityCard activityData={activity}/>)}
       
+      
+      </div>
       </>
       )
   }
@@ -58,7 +59,7 @@ const Activities = () => {
 
 
   return (
-    <main>
+    <main className='w-full bg-gradient-to-b from-black via-green-900 to-green-800'>
     {content}
     </main>
   )

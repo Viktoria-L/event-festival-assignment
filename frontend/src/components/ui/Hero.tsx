@@ -30,6 +30,9 @@ const Hero = () => {
                         <Link to="/program" className="btn-primary">
                         BUY TICKETS NOW!
                         </Link>
+                        <Link to="/program" className="btn-secondary">
+                         EXPLORE EOS
+                        </Link>
                     </div>
             </div>
         </div>

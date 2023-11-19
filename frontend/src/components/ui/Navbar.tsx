@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-green-900">
+    <nav className="bg-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="h-16 flex justify-between md:justify-center items-center">
           <div className="flex space-x-4">
@@ -19,12 +19,12 @@ const Navbar = () => {
 
             {/* Huvudmeny */}
             <div className="hidden md:flex items-center space-x-1">
-              <NavLink to="/" className="py-5 px-3 text-white">Home</NavLink>
-              <NavLink to="/program" className="py-5 px-3 text-white">Program</NavLink>
+              <NavLink to="/" className="navLinkMD">Home</NavLink>
+              <NavLink to="/program" className="navLinkMD">Program</NavLink>
               {/* Ikon endast synlig på stora skärmar */}
               <GiAbstract116 className="hidden md:block mx-auto text-3xl" />
-              <NavLink to="/tickets" className="py-5 px-3 text-white">Tickets</NavLink>
-              <NavLink to="/contact" className="py-5 px-3 text-white">Contact</NavLink>
+              <NavLink to="/tickets" className="navLinkMD">Tickets</NavLink>
+              <NavLink to="/contact" className="navLinkMD">Contact</NavLink>
             </div>
           </div>
 
@@ -39,10 +39,10 @@ const Navbar = () => {
 
       {/* Mobilmeny */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <NavLink to="/" className="block py-2 px-4 text-sm text-white">Home</NavLink>
-        <NavLink to="/program" className="block py-2 px-4 text-sm text-white">Program</NavLink>
-        <NavLink to="/tickets" className="block py-2 px-4 text-sm text-white">Tickets</NavLink>
-        <NavLink to="/contact" className="block py-2 px-4 text-sm text-white">Contact</NavLink>
+        <NavLink to="/" className="navLinkSM">Home</NavLink>
+        <NavLink to="/program" className="navLinkSM">Program</NavLink>
+        <NavLink to="/tickets" className="navLinkSM">Tickets</NavLink>
+        <NavLink to="/contact" className="navLinkSM">Contact</NavLink>
       </div>
     </nav>
   );

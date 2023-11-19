@@ -29,7 +29,7 @@ console.log("endpoint o id, url", endpoint, id, url)
     url = url + `/${id}`;
   } 
   else {
-    url += '?_sort=id&_order=desc';
+    url += '?_sort=id&_order=asc';
   }
 
   const response = await fetch(url, options);
