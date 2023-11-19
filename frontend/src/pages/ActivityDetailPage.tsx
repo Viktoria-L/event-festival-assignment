@@ -49,14 +49,16 @@ let content: ReactNode;
     content = <div>{error}</div>
   }
 
+
+  //Byt header rubrik här nedan
     return (
-    <article className="container">
+    <main className="w-full bg-gradient-to-b from-black via-green-900 to-green-800 p-8">
         {/* <Header> */}
             <h2>Information om</h2>
             <p>{activity?.activity}</p>
         {/* </Header> */}
         {content}
-    </article>
+    </main>
   )
 }
 

@@ -50,7 +50,7 @@ console.log("endpoint o id, url", endpoint, id, url)
 };
 
 const addData = async (body) => {
-  const response = await fetch(baseUrl, {
+  const response = await fetch(`${baseUrl}tickets`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

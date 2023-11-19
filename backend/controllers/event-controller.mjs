@@ -22,6 +22,7 @@ const addTicket = async (req, res) => {
   } else {
     return res.status(500).json(response);
   }
+  console.log(response);
 };
 
 export { listActivities, getActivity, addTicket };

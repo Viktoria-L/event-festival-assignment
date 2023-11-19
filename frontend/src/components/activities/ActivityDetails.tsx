@@ -8,7 +8,7 @@ type ActivityDetailProps = {
 // //Två sätt
 // //const activityDetails = ({activity}: activityDetailProps) => {
 const ActivityDetails: FC<ActivityDetailProps> = ({activity}) => {
-    const url = '../src/assets/images/';
+  
 
     //Gör kanske en if-sats här som tar in ett mode beroende på vilken activitet
     //det handlar om så ska content se ut si eller så
@@ -16,7 +16,7 @@ const ActivityDetails: FC<ActivityDetailProps> = ({activity}) => {
   return (
     <article className="container">
         <div className="activity-info">
-            <img src={url + activity.image} alt="" />
+          <img src={activity.image} alt={activity.description} className="max-w-lg" />
            <div className="title">
             {activity.activity}
            </div>
@@ -30,8 +30,8 @@ const ActivityDetails: FC<ActivityDetailProps> = ({activity}) => {
             <p>{activity.description}</p>
            </div>
            <div className="items">
-            <p>Gå igenom alla ITems här</p>
-            <p>{activity.items[0].type}</p>
+            <p>Gå igenom alla Items här nedanför, olika beroende på type</p>
+            <p>{activity.items[0].name}</p>
            </div>
         </div>
 
