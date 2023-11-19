@@ -3,7 +3,6 @@
   z-index: 1;
   top: 0;
   opacity: 0.9;
-  border-bottom: solid 1px var(--header-color);
 }
 
 nav {

@@ -1,108 +1,50 @@
-// import { NavLink } from 'react-router-dom';
-// import './navbar.css';
-// import { GiAbstract116 } from "react-icons/gi";
-
-// const Navbar = () => {
-//   return (
-//     <header className='navbar-header bg-gray-900 text-center'>
-//       <nav>
-//         <div>
-//           <ul className='menu'>
-//             <li className='logo'>
-//               <NavLink className='page-title' to='/'>
-//                 <span className='inline-block mr-2'>
-//                   <GiAbstract116 />
-//                 </span>
-//                 {/* <span className='font-fontZ tracking-wider'>Echoes of <strong>Shanti</strong></span> */}
-//               </NavLink>
-//             </li>
-//             <li className='toggle'>
-//               <input className='menu-btn' type='checkbox' id='menu-btn' />
-//               <label className='menu-icon' htmlFor='menu-btn'>
-//                 <span className='nav-icon'></span>
-//               </label>
-//             </li>
-//             <li className='menu-item'>
-//               <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to='/'>
-//                 Home
-//               </NavLink>
-//             </li>
-//             <li className='menu-item'>
-//               <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to='/vehicles'>
-//                 Program
-//               </NavLink>
-//             </li>
-// {/* Kanske lägga ikonen i mitten och ha meny på sidorna av den */}
-
-//             <li className='menu-item'>
-//               <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to='/about'>
-//                 Tickets
-//               </NavLink>
-//             </li>
-//             <li className='menu-item'>
-//               <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to='/contact'>
-//                 Contact
-//               </NavLink>
-//             </li>
-//           </ul>
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-
-
-import { NavLink } from 'react-router-dom';
 import { GiAbstract116 } from "react-icons/gi";
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className='bg-black text-white'>
-      <nav className='flex justify-center items-center p-4'>
-        {/* Logo och navigation toggle */}
-        <div className='absolute left-4 md:left-8 lg:left-16'>
-        
-        </div>
+    <nav className="bg-green-900">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="h-16 flex justify-between md:justify-center items-center">
+          <div className="flex space-x-4">
+            {/* Logo eller ikon för små skärmar */}
+            <div className="flex items-center text-white text-lg">
+              <GiAbstract116 className="md:hidden text-3xl"/>
+            </div>
 
-        {/* Menyn */}
-        <ul className='hidden md:flex justify-center items-center space-x-6'>
-          <li>
-            <NavLink className={({ isActive }) => isActive ? 'text-purple-500' : ''} to='/'>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={({ isActive }) => isActive ? 'text-purple-500' : ''} to='/vehicles'>
-              Program
-            </NavLink>
-          </li>
-          <NavLink className='flex items-center' to='/'>
-            <GiAbstract116 className='text-3xl' />
-            {/* <span className='ml-2 font-fontZ tracking-wider'>Echoes of <strong>Shanti</strong></span> */}
-          </NavLink>
-          <li>
-            <NavLink className={({ isActive }) => isActive ? 'text-purple-500' : ''} to='/about'>
-              Tickets
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={({ isActive }) => isActive ? 'text-blue-500' : ''} to='/contact'>
-              Contact
-            </NavLink>
-          </li>
-        </ul>
+            {/* Huvudmeny */}
+            <div className="hidden md:flex items-center space-x-1">
+              <NavLink to="/" className="py-5 px-3 text-white">Home</NavLink>
+              <NavLink to="/program" className="py-5 px-3 text-white">Program</NavLink>
+              {/* Ikon endast synlig på stora skärmar */}
+              <GiAbstract116 className="hidden md:block mx-auto text-3xl" />
+              <NavLink to="/tickets" className="py-5 px-3 text-white">Tickets</NavLink>
+              <NavLink to="/contact" className="py-5 px-3 text-white">Contact</NavLink>
+            </div>
+          </div>
 
-        {/* Mobilmeny toggle */}
-        <div className='md:hidden flex items-center'>
-          <input className='hidden' type='checkbox' id='menu-btn' />
-          <label className='menu-icon' htmlFor='menu-btn'>
-            <span className='nav-icon'></span>
-          </label>
+          {/* Mobilmenyknapp */}
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <IoClose className="text-3xl" /> : <IoMenu className="text-3xl" />}
+            </button>
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+
+      {/* Mobilmeny */}
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+        <NavLink to="/" className="block py-2 px-4 text-sm text-white">Home</NavLink>
+        <NavLink to="/program" className="block py-2 px-4 text-sm text-white">Program</NavLink>
+        <NavLink to="/tickets" className="block py-2 px-4 text-sm text-white">Tickets</NavLink>
+        <NavLink to="/contact" className="block py-2 px-4 text-sm text-white">Contact</NavLink>
+      </div>
+    </nav>
   );
 };
 

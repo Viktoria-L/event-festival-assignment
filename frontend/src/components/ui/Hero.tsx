@@ -17,14 +17,17 @@ const Hero = () => {
                     SHANTI
                   </strong>
               </h1>
-              <p className="mt-4 max-w-lg text-md">
+              <p className="mt-4 text-xl text-green-400 font-bold tracking-wider">
+                13-16 JUNE 2024, Croatia
+              </p>
+              <p className="mt-4 text-sm">
                 3 DAYS - 30 ARTISTS - 5000 PARTICIPANTS
               </p>
 
         
 
                     <div className="mt-8 flex flex-wrap gap-4 text-center justify-center">
-                        <Link to="/products" className="btn-primary">
+                        <Link to="/program" className="btn-primary">
                         BUY TICKETS NOW!
                         </Link>
                     </div>

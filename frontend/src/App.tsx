@@ -18,8 +18,8 @@ const App = () => {
     createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route index element={<Home />}></Route>
-      <Route path='/activities' element={<Activities />}></Route>
-      <Route path='/activities/:id' element={<ActivityDetailPage />}></Route>
+      <Route path='/program' element={<Activities />}></Route>
+      <Route path='/program/:id' element={<ActivityDetailPage />}></Route>
      {/*} <Route path='/about' element={<AboutPage />}></Route>
       <Route path='/contact' element={<ContactPage />}></Route> */}
       {/* <Route path='*' element={<PageNotFound />}></Route> */}

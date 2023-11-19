@@ -5,7 +5,8 @@
 
 @layer components {
   .btn-primary {
-    @apply block w-full rounded bg-green-700 px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring active:bg-rose-500 sm:w-auto;
+    @apply block w-full rounded bg-green-700 px-12 py-3 text-sm font-medium
+     text-white shadow focus:outline-none focus:ring hover:bg-green-800 sm:w-auto;
   }
   
   .btn-secondary {
