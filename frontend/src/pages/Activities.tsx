@@ -35,7 +35,6 @@ const Activities = () => {
   if(activities){
     content = (
       <>
-      <h1 className='my-12 font-bold text-3xl text-center'>Program</h1>
       <p className='text-center'>Here you can explore all the activities on the festival grounds.</p>
       <div className='flex flex-wrap justify-center gap-8 my-12'>
         {activities.map((activity) => 
@@ -49,7 +48,7 @@ const Activities = () => {
   
   if(isLoading){
     // content = <Progress text="Hämtar bilar, vänta lite..."/>
-    content = <h2>Loading...</h2>;
+    content = <h2 className='text-center'>Loading...</h2>;
   }
 
   if(error){
@@ -59,7 +58,8 @@ const Activities = () => {
 
 
   return (
-    <main className='w-full bg-gradient-to-b from-black via-green-900 to-green-800'>
+    <main className=''>
+      <h1 className='my-12 font-bold text-3xl text-center'>Program</h1>
     {content}
     </main>
   )

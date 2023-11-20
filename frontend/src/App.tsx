@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Activities from "./pages/Activities";
 import ActivityDetailPage from "./pages/ActivityDetailPage";
 import TicketsPage from "./pages/TicketsPage";
-//import ContactPage from "./pages/Contact";
+import ContactPage from "./pages/Contact";
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
       <Route path='/program' element={<Activities />}></Route>
       <Route path='/program/:id' element={<ActivityDetailPage />}></Route>
       <Route path='/tickets' element={<TicketsPage />}></Route>
-      {/* <Route path='/contact' element={<ContactPage />}></Route>  */}
+      <Route path='/contact' element={<ContactPage />}></Route> 
       {/* <Route path='*' element={<PageNotFound />}></Route> */}
     </Route>
     ));

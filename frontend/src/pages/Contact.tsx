@@ -4,6 +4,8 @@ import './contact.css';
 const ContactPage = () => {
   return (
     <main>
+      <h1 className='my-12 font-bold text-3xl text-center'>Contact Us</h1>
+    
       <article>
         <section id='contact-form'>
           <h1 className='page-title'>Kontakta Oss</h1>

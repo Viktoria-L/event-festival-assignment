@@ -257,7 +257,8 @@
       "benefits": [
         "Access to all stages",
         "Standard camping spot"
-      ]
+      ],
+      "image": "http://localhost:3000/images/general.png"
     },
     {
       "id": 2,
@@ -267,15 +268,17 @@
         "Premium stage access",
         "VIP camping area",
         "Exclusive lounge access"
-      ]
+      ],
+      "image": "http://localhost:3000/images/vip.png"
     },
     {
       "id": 3,
       "type": "Day Pass",
       "price": "$50",
       "benefits": [
-        "Single day access to all stages"
-      ]
+        "Access to all stages"
+      ],
+      "image": "http://localhost:3000/images/day.png"
     }
   ],
   "tickets": [
@@ -283,19 +286,57 @@
       "firstname": "Viktoria",
       "lastname": "Lindberg",
       "email": "viktorial86@hotmail.com",
-      "phonenumber": "0761271073",
-      "ticketType": "he556",
-      "price": "100",
-      "id": 6
+      "ticket": "Day Pass",
+      "id": 8
     },
     {
       "firstname": "Viktoria",
       "lastname": "Lindberg",
       "email": "viktorial86@hotmail.com",
-      "phonenumber": "0761271073",
-      "ticket": "he556",
-      "price": "100",
-      "id": 7
+      "ticket": "VIP",
+      "id": 9
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "VIP",
+      "id": 25
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "Day Pass",
+      "id": 26
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "General Admission",
+      "id": 27
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "Day Pass",
+      "id": 28
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "VIP",
+      "id": 29
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "Day Pass",
+      "id": 30
     }
   ]
 }

@@ -4,22 +4,18 @@ interface TicketTypeProps {
     ticketType: ITicket;
 }
 
-
 export const TicketCard = ({ticketType}: TicketTypeProps) => {
-    console.log(ticketType)
 
-    const {type, price, benefits} = ticketType;
+    const {type, price, benefits, image} = ticketType;
 
-    const handleClick = () => {
-
-    }
- 
-    //Gör om benefits till en punktlista ul --> li items
     return (
-    <div>
-        <h3>{type}</h3>
+    <div className="flex flex-col items-center">
+        <h3 className="font-bold tracking-wide mb-2">{type}</h3>
+        <img src={image} className="w-44 rounded-md mb-2"/>
         <p>{price}</p>
-        {benefits.map((benefit, i)=> <p key={i}>{benefit}</p>)}
+        <ul>
+        {benefits.map((benefit, i)=> <li className="list-inside list-disc" key={i}>{benefit}</li>)}
+        </ul>
     </div>
   )
 }

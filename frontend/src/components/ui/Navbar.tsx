@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="h-16 flex justify-between md:justify-center items-center">
           <div className="flex space-x-4">
             {/* Logo eller ikon för små skärmar */}
@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
 
             {/* Huvudmeny */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center md:gap-4">
               <NavLink to="/" className="navLinkMD">Home</NavLink>
               <NavLink to="/program" className="navLinkMD">Program</NavLink>
               {/* Ikon endast synlig på stora skärmar */}

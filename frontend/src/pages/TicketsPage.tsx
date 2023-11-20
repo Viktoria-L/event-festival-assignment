@@ -1,19 +1,20 @@
-import { IActivity } from "../components/activities/IActivity";
-import { IActivitiesResponseType } from "../components/utils/IActivitiesResponseType";
 import { ITicketTypeResponse } from "../components/utils/ITicketTypeResonse";
+import { ITicketHolderResponse } from "../components/utils/ITicketHolderResponse";
 import { getData, postData } from "../components/utils/httpClient";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import Form, { type FormBehaviour } from '../components/ui/Form';
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
-import { ITicket } from "../components/ticket/ITicket";
+import { ITicket, ITicketHolder } from "../components/ticket/ITicket";
 import { TicketCard } from "../components/ticket/TicketCard";
 
 const TicketsPage = () => {
     const [error, setError] = useState<string>();
     const [ticketType, setTicketType] = useState<ITicket[]>([]);
-    const [ticket, setTicket] = useState<string>();
+    const [ticket, setTicket] = useState<string>('General Admission');
     const [isLoading, setIsLoading] = useState(false);
+    const [purchaseDone, setPurchaseDone] = useState(false);
+    const [ticketHolder, setTicketHolder] = useState<ITicketHolder>();
     
     useEffect(() => {
       getTicketTypes();
@@ -27,7 +28,6 @@ const TicketsPage = () => {
         setIsLoading(true);
         const result = await getData<ITicketTypeResponse>('http://localhost:8080/api/ticketType')
         setTicketType(result.data);
-        console.log("result", result)
   
       } catch (error) {
         if(error instanceof Error){
@@ -40,25 +40,23 @@ const TicketsPage = () => {
     }
 //Funktion för att spara/köpa ticket
     const handleSave = async (data: unknown) => {
-    const dataToSave = data as IActivity;
+    const dataToSave = data as ITicketHolder;
 
     console.log("datatoSave", dataToSave)
-    //Det fungerar men jag har inte byggt upp min databas som jag lägger in tickets
-    //kanske göra en tickets och sen en ticketHolders som man fetchar mot för att där kunna se alla som köpt tickets
-    // för nu lägger köparen sig som en biljett
-
+   
     try {
-      const result = await postData<IActivity, IActivitiesResponseType>(
+      const result = await postData<ITicketHolder, ITicketHolderResponse>(
         'http://localhost:8080/api/tickets',
         dataToSave
       );
 
       if (result.statusCode === 201) {
-        // getTickets();
-        //Gör nåt med responsen,
+        setPurchaseDone(true);
         console.log("Resultat lyckades", result)
+        setTicketHolder(result.data)
+        
       } else {
-        throw new Error('Det gick inte att köpa biljetten!');
+        throw new Error('Sorry, something went wrong, you could not buy the ticket!');
       }
     } catch (error) {
       if (error instanceof Error) {
@@ -71,31 +69,54 @@ const TicketsPage = () => {
 
     //Det fungerar nu att välja biljett och sätta den i inputfältet för vald biljett, dock måste jag görade olika biljett
     //typerna klara och skriva in dessa samt skicka in som parameter i handleTicket
-    const handleTicket = () => {
-        setTicket("he556");
+    const handleTicket = (type: string) => {
+        setTicket(type);
     }
 
     let content: ReactNode;
     
-if(ticketType){
-  content = (ticketType.map((ticketItem) => <TicketCard ticketType={ticketItem} />))
-}
+    if(ticketType){
+      content = (ticketType.map((ticketItem) =>(
+      <div className="w-64 border-4 rounded-lg h-auto py-4 px-2 hover:transform hover:duration-300 hover:scale-105 cursor-pointer" onClick={()=>handleTicket(ticketItem.type)}>
+        <TicketCard ticketType={ticketItem} />
+        </div>)))
+    }
+
+    if(error){
+      content= <p>{error}</p>;
+    }
+
+    if(isLoading){
+      content = <p>Loading...</p>
+    }
+    
+    if(purchaseDone){
+      content = (<div className="flex flex-col justify-center items-center"><h3 className="text-center">Thank you {ticketHolder?.firstname}! You successfully purchased a {ticketHolder?.ticket} ticket!</h3>
+      
+      
+      <div className="flex justify-center mt-4">
+        <button className="btn-primary" onClick={()=>setPurchaseDone(false)}>Buy more!</button></div>
+        </div>)
+    }
 
 
   return (
     <main>
-    <div>TicketsPage</div>
-    <div>{content}</div>
-    <div className="bg-green-300 m-4" onClick={handleTicket}>Låtsasbiljett</div>
-    <Form onSave={handleSave} ref={ticketForm}>
-          <Input type='text' inputId='firstname' labelText='Firstname' />
-          <Input type='text' inputId='lastname' labelText='Lastname' />
-          <Input type='text' inputId='email' labelText='Email' />
-          <Input type='number' inputId='phonenumber' labelText='Phonenumber' />
-          <Input type='text' inputId='ticket' labelText='Ticket' value={ticket} placeholder={ticket} />
-          <Input type='number' inputId='price' labelText='Price' />
-          <Button>Buy</Button>
-        </Form>
+    <h1 className='my-12 font-bold text-3xl text-center'>Tickets</h1>
+    <p className='text-center'>Here you can explore and buy tickets to the festival and camping area.</p>
+    
+    <div className="flex gap-20 my-12 justify-center md:mx-8 flex-wrap">{content}</div>
+
+    <h3 className="text-center mb-4">Select ticket type by tapping the tickets above</h3>
+    <Form onSave={handleSave} ref={ticketForm} className="flex flex-col items-center">
+          <Input type='text' inputId='firstname' labelText='Firstname' className="py-1 px-2"required />
+          <Input type='text' inputId='lastname' labelText='Lastname' className="py-1 px-2"required />
+          <Input type='text' inputId='email' labelText='Email'className="py-1 px-2" required />
+          <Input type='text' inputId='ticket' labelText='Ticket' value={ticket} placeholder={ticket} className="py-1 px-2" readOnly/>
+          <div className="btn-primary mt-4 mb-24"><Button>Buy</Button></div>
+    </Form>
+
+    
     </main>
   )
 }
