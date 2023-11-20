@@ -1,5 +1,5 @@
 import express from 'express';
-import { listActivities, getActivity, addTicket } from '../controllers/event-controller.mjs';
+import { listActivities, getActivity, addTicket, getTickets } from '../controllers/event-controller.mjs';
 
 const router = express.Router();
 
@@ -9,10 +9,10 @@ router.route('/activities').get(listActivities)
 // GET request till '/api/activities/:id'
 router.route('/activities/:id').get(getActivity) 
 
-// GET och POST request till '/api/tickets' get(getTicket)
-router.route('/tickets').post(addTicket); 
+// GET och POST request till '/api/tickets' och ticketType get(getTicket)
+router.route('/tickets').post(addTicket);
+router.route('/ticketType').get(getTickets); 
 
 
-//Behöve rjag ens ha en getTicket?
-//för responsen på posten är väl det jag ska hantera
+
 export default router;

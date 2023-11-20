@@ -249,7 +249,7 @@
       }
     }
   ],
-  "tickets": [
+  "ticketType": [
     {
       "id": 1,
       "type": "General Admission",
@@ -257,13 +257,6 @@
       "benefits": [
         "Access to all stages",
         "Standard camping spot"
-      ],
-      "ticketHolders": [
-        {
-          "ticketNumber": 1,
-          "name": "namn",
-          "email": "email"
-        }
       ]
     },
     {
@@ -274,13 +267,6 @@
         "Premium stage access",
         "VIP camping area",
         "Exclusive lounge access"
-      ],
-      "ticketHolders": [
-        {
-          "ticketNumber": 1,
-          "name": "namn",
-          "email": "email"
-        }
       ]
     },
     {
@@ -289,47 +275,18 @@
       "price": "$50",
       "benefits": [
         "Single day access to all stages"
-      ],
-      "ticketHolders": [
-        {
-          "ticketNumber": 1,
-          "name": "namn",
-          "email": "email"
-        }
       ]
-    },
+    }
+  ],
+  "tickets": [
     {
-      "id": 4,
-      "type": "Group Package",
-      "price": "$400",
-      "benefits": [
-        "4 General Admission tickets",
-        "Group camping spot"
-      ],
-      "ticketHolders": [
-        {
-          "ticketNumber": 1,
-          "name": "namn",
-          "email": "email"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "type": "Wellness Package",
-      "price": "$150",
-      "benefits": [
-        "Access to all stages",
-        "Yoga and meditation sessions",
-        "Healthy meal options"
-      ],
-      "ticketHolders": [
-        {
-          "ticketNumber": 1,
-          "name": "namn",
-          "email": "email"
-        }
-      ]
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "phonenumber": "0761271073",
+      "ticketType": "he556",
+      "price": "100",
+      "id": 6
     },
     {
       "firstname": "Viktoria",
@@ -338,7 +295,7 @@
       "phonenumber": "0761271073",
       "ticket": "he556",
       "price": "100",
-      "id": 6
+      "id": 7
     }
   ]
 }

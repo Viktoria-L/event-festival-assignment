@@ -25,4 +25,10 @@ const addTicket = async (req, res) => {
   console.log(response);
 };
 
-export { listActivities, getActivity, addTicket };
+const getTickets = async (req, res) => {
+  const response = await fetchData('ticketType');
+  console.log("från ticketType", response)
+  res.status(200).json(response);
+};
+
+export { listActivities, getActivity, addTicket, getTickets };
