@@ -12,10 +12,6 @@ export interface IActivitiesData {
     activities: IActivity[];
 }
 
-// Definierar ett interface för de items som hör till en aktivitet
-// export interface ActivityItems {
-//     artists: Artist[];
-// }
 
 // Basinterface för alla items-typer
 export interface ItemsBase {

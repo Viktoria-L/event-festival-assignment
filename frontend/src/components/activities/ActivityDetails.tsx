@@ -5,8 +5,6 @@ type ActivityDetailProps = {
     activity: IActivity;
 };
 
-// //Två sätt
-// //const activityDetails = ({activity}: activityDetailProps) => {
 const ActivityDetails: FC<ActivityDetailProps> = ({activity}) => {
   
 
@@ -14,27 +12,20 @@ const ActivityDetails: FC<ActivityDetailProps> = ({activity}) => {
     //det handlar om så ska content se ut si eller så
 
   return (
-    <article className="container">
-        <div className="activity-info">
-          <img src={activity.image} alt={activity.description} className="max-w-lg" />
-           <div className="title">
+    <article className="w-full mt-8 flex flex-col justify-center items-center">
+        <div className="max-w-xl flex flex-col justify-center items-center">
+          <img src={activity.image} alt={activity.description} className="max-w-xl" />
+           <div className='mt-8 text-3xl font-bold'>
             {activity.activity}
            </div>
-           {/* <div>
-            <span>Performance {activity.}</span>
-            <span>Antal km {activity.mileage}</span>
-            <span>Pris {activity.value}</span>
-           </div> */}
-           <div className="description">
-            <p>Beskrivning</p>
+          <div className="description">
             <p>{activity.description}</p>
            </div>
-           <div className="items">
+        </div>
+           <div className="max-w-3xl">
             <p>Gå igenom alla Items här nedanför, olika beroende på type</p>
             <p>{activity.items[0].name}</p>
            </div>
-        </div>
-
     </article>
   )
 }

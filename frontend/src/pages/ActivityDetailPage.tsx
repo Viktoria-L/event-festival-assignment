@@ -52,11 +52,10 @@ let content: ReactNode;
 
   //Byt header rubrik här nedan
     return (
-    <main className="w-full bg-gradient-to-b from-black via-green-900 to-green-800 p-8">
-        {/* <Header> */}
-            <h2>Information om</h2>
-            <p>{activity?.activity}</p>
-        {/* </Header> */}
+    <main>
+          <h1 className='my-12 font-bold text-3xl text-center'>Info</h1>
+          <p className="text-center">Echoes Of Shanti festival has a lot to offer!</p>
+          <p className="text-center">Don't miss out on this magical weekend, making new memories!</p> 
         {content}
     </main>
   )

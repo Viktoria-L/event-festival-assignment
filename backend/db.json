@@ -227,26 +227,30 @@
       "activity": "Market",
       "image": "http://localhost:3000/images/market1.png",
       "description": "Craft market with a variety of handmade products, from clothing to unique accessories.",
-      "items": {
-        "id": 1,
-        "type": "market",
-        "image": "url",
-        "name": "Artisan Wonders",
-        "description": "A collection of handcrafted items from local artisans."
-      }
+      "items": [
+        {
+          "id": 1,
+          "type": "market",
+          "image": "url",
+          "name": "Artisan Wonders",
+          "description": "A collection of handcrafted items from local artisans."
+        }
+      ]
     },
     {
       "id": 6,
       "activity": "Chill",
       "image": "http://localhost:3000/images/chill.png",
       "description": "Serene chill areas for relaxation and socializing, nestled in nature.",
-      "items": {
-        "id": 1,
-        "type": "chill",
-        "image": "url",
-        "name": "Forest Retreat",
-        "description": "A tranquil spot amidst the trees for relaxation."
-      }
+      "items": [
+        {
+          "id": 1,
+          "type": "chill",
+          "image": "url",
+          "name": "Forest Retreat",
+          "description": "A tranquil spot amidst the trees for relaxation."
+        }
+      ]
     }
   ],
   "ticketType": [
@@ -337,6 +341,27 @@
       "email": "viktorial86@hotmail.com",
       "ticket": "Day Pass",
       "id": 30
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "VIP",
+      "id": 31
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "General Admission",
+      "id": 32
+    },
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "VIP",
+      "id": 33
     }
   ]
 }

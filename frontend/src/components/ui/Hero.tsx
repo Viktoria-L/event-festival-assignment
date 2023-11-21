@@ -28,10 +28,10 @@ const Hero = () => {
 
                     <div className="mt-8 flex flex-wrap gap-4 text-center justify-center">
                         <Link to="/program" className="btn-primary">
-                        BUY TICKETS NOW!
+                        EXPLORE EOS
                         </Link>
-                        <Link to="/program" className="btn-secondary">
-                         EXPLORE EOS
+                        <Link to="/tickets" className="btn-secondary">
+                         BUY TICKETS NOW
                         </Link>
                     </div>
             </div>

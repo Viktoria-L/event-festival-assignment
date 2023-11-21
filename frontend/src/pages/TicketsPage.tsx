@@ -104,8 +104,10 @@ const TicketsPage = () => {
     <main>
     <h1 className='my-12 font-bold text-3xl text-center'>Tickets</h1>
     <p className='text-center'>Here you can explore and buy tickets to the festival and camping area.</p>
+    <p className='text-center'>Echoes of Shanti is not just a festival; it's a journey of discovery, celebration, and connection. </p>
+    <p className='text-center'>Join us in this serene setting as we unite to celebrate life, art, and the echoes of peace that resonate within us all.</p>
     
-    <div className="flex gap-20 my-12 justify-center md:mx-8 flex-wrap">{content}</div>
+    <div className="flex gap-8 lg:gap-20 my-12 justify-center md:mx-8 flex-wrap">{content}</div>
 
     <h3 className="text-center mb-4">Select ticket type by tapping the tickets above</h3>
     <Form onSave={handleSave} ref={ticketForm} className="flex flex-col items-center">

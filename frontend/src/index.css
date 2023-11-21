@@ -10,7 +10,7 @@
   }
   
   .btn-secondary {
-    @apply block rounded bg-black bg-opacity-40 border-2 border-green-700 hover:bg-green-700 px-8 py-3 text-sm font-medium sm:w-auto;
+    @apply block rounded bg-black bg-opacity-50 border-2 border-green-700 hover:bg-green-700 px-8 py-3 text-sm font-medium sm:w-auto;
   }
 
   .navLinkMD {
