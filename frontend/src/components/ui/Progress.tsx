@@ -1,4 +1,3 @@
-import './progress.css';
 
 type ProgressProps = {
     text: string;

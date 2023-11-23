@@ -8,7 +8,6 @@ interface ItemComponentProps {
   item: Items;
 }
 
-
 const ActivityDetails: FC<ActivityDetailProps> = ({activity}:ActivityDetailProps) => {
   const renderItem = (item: Items) => {
     switch(item.type) {
@@ -18,7 +17,7 @@ const ActivityDetails: FC<ActivityDetailProps> = ({activity}:ActivityDetailProps
       case 'food':
       case 'chill':
       case 'market':
-        return <ItemComponent item={item} />;
+        return <ItemComponent key={item.id} item={item} />;
       default:
         return null;
     }

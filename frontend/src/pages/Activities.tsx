@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { IActivity } from '../components/activities/IActivity';
 import { IActivitiesResponseType } from '../components/utils/IActivitiesResponseType';
 import ActivityCard from '../components/activities/ActivityCard';
+import Progress from '../components/ui/Progress';
 
 const Activities = () => {
 
@@ -19,7 +20,6 @@ const Activities = () => {
       setIsLoading(true);
       const result = await getData<IActivitiesResponseType>('http://localhost:8080/api/activities')
       setActivities(result.data);
-      console.log("result", result)
 
     } catch (error) {
       if(error instanceof Error){
@@ -45,18 +45,17 @@ const Activities = () => {
   }
   
   if(isLoading){
-    // content = <Progress text="Hämtar bilar, vänta lite..."/>
-    content = <h2 className='text-center'>Loading...</h2>;
+    content = <Progress text="Loading activities, please wait..."/>
+  
   }
 
   if(error){
-    // content = <Alert mode="error">{error}</Alert>
-    content = <h2>{error}</h2>;
+     content = <h2>{error}</h2>;
   }
 
 
   return (
-    <main className=''>
+    <main>
       <h1 className='my-12 font-bold text-3xl text-center'>Program</h1>
     <div className='w-full flex flex-col justify-center items-center'>
     {content}

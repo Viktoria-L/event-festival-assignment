@@ -1,5 +1,5 @@
 import { ITicketTypeResponse } from "../components/utils/ITicketTypeResonse";
-import { ITicketHolderResponse, ITicketHoldersResponse } from "../components/utils/ITicketHolderResponse";
+import { ITicketHolderResponse } from "../components/utils/ITicketHolderResponse";
 import { getData, postData } from "../components/utils/httpClient";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import Form, { type FormBehaviour } from '../components/ui/Form';

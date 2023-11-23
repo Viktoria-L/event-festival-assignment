@@ -20,7 +20,6 @@ const ActivityDetailPage = () => {
             setIsLoading(true);
             const result = await getData<IActivityResponseType>(`http://localhost:8080/api/activities/${params.id}`);
             setActivity(result.data);
-      console.log("response", result)
 
         } catch(error) {
             if(error instanceof Error){
@@ -36,7 +35,6 @@ const ActivityDetailPage = () => {
   
 let content: ReactNode;
 
-//Beroende på aktivitet kanske en props om mode måste in eftersom datat ser olika ut?
   if(activity){
     content = <ActivityDetails activity={activity} />
   }
@@ -49,8 +47,6 @@ let content: ReactNode;
     content = <div>{error}</div>
   }
 
-
-  //Byt header rubrik här nedan
     return (
     <main>
           <h1 className='mt-12 mb-8 font-bold text-3xl text-center'>Program Info</h1>

@@ -21,32 +21,27 @@ export interface ItemsBase {
     image: string;
   }
   
-  // Specifikt interface för artist-typen
  export interface Artists extends ItemsBase {
     type: 'artist';
     genre: string;
     performanceDate: string;
 }
   
-  // Specifikt interface för konstnärs-typen
   export interface ArtExhibitor extends ItemsBase {
     type: 'art';
     style: string;
 }
-//Food
 export interface Food extends ItemsBase {
     type: 'food';
     cuisine: string;
 }
 
-//yoga
 export interface Yoga extends ItemsBase {
     type: 'yoga';
     style: string;
     classDate: string;
 }
 
-//yoga
 export interface Chill extends ItemsBase {
     type: 'chill';
     description: string;
@@ -57,8 +52,8 @@ export interface Market extends ItemsBase {
     description: string;
 }
   
-  // Unionstyp som representerar alla möjliga items-typer
-  export type Items = Artists | ArtExhibitor | Food | Yoga | Chill | Market; // Lägg till andra feature-typer med | operatorn
+
+export type Items = Artists | ArtExhibitor | Food | Yoga | Chill | Market; 
   
 
   

@@ -22,7 +22,6 @@ const App = () => {
       <Route path='/program/:id' element={<ActivityDetailPage />}></Route>
       <Route path='/tickets' element={<TicketsPage />}></Route>
       <Route path='/contact' element={<ContactPage />}></Route> 
-      {/* <Route path='*' element={<PageNotFound />}></Route> */}
     </Route>
     ));
 

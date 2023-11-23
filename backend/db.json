@@ -286,6 +286,12 @@
     }
   ],
   "tickets": [
-
+    {
+      "firstname": "Viktoria",
+      "lastname": "Lindberg",
+      "email": "viktorial86@hotmail.com",
+      "ticket": "Day Pass",
+      "id": 1
+    }
   ]
 }
