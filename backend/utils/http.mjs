@@ -40,7 +40,6 @@ console.log("endpoint o id, url", endpoint, id, url)
     responseType.status = 'Success';
     responseType.statusCode = 200;
     responseType.data = result;
-    console.log("Vilken error inne i ok", responseType.error)
 
     return responseType;
   } else {
