@@ -1,5 +1,5 @@
 import { ITicketTypeResponse } from "../components/utils/ITicketTypeResonse";
-import { ITicketHolderResponse } from "../components/utils/ITicketHolderResponse";
+import { ITicketHolderResponse, ITicketHoldersResponse } from "../components/utils/ITicketHolderResponse";
 import { getData, postData } from "../components/utils/httpClient";
 import { useState, useRef, useEffect, type ReactNode } from "react";
 import Form, { type FormBehaviour } from '../components/ui/Form';
@@ -15,9 +15,11 @@ const TicketsPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [purchaseDone, setPurchaseDone] = useState(false);
     const [ticketHolder, setTicketHolder] = useState<ITicketHolder>();
+
     
     useEffect(() => {
       getTicketTypes();
+   
      }, [])
   
     const ticketForm = useRef<FormBehaviour>(null);
@@ -36,13 +38,12 @@ const TicketsPage = () => {
         }
       }
       setIsLoading(false);
-
     }
-//Funktion för att spara/köpa ticket
+
+
+     //Funktion för att spara/köpa ticket
     const handleSave = async (data: unknown) => {
     const dataToSave = data as ITicketHolder;
-
-    console.log("datatoSave", dataToSave)
    
     try {
       const result = await postData<ITicketHolder, ITicketHolderResponse>(
@@ -67,8 +68,6 @@ const TicketsPage = () => {
         ticketForm.current?.clear();
     };
 
-    //Det fungerar nu att välja biljett och sätta den i inputfältet för vald biljett, dock måste jag görade olika biljett
-    //typerna klara och skriva in dessa samt skicka in som parameter i handleTicket
     const handleTicket = (type: string) => {
         setTicket(type);
     }
@@ -77,7 +76,7 @@ const TicketsPage = () => {
     
     if(ticketType){
       content = (ticketType.map((ticketItem) =>(
-      <div className="w-64 border-4 rounded-lg h-auto py-4 px-2 hover:transform hover:duration-300 hover:scale-105 cursor-pointer" onClick={()=>handleTicket(ticketItem.type)}>
+      <div key={ticketItem.id} className="w-64 border-4 rounded-lg h-auto py-4 px-2 hover:transform hover:duration-300 hover:scale-105 cursor-pointer" onClick={()=>handleTicket(ticketItem.type)}>
         <TicketCard ticketType={ticketItem} />
         </div>)))
     }
@@ -91,14 +90,12 @@ const TicketsPage = () => {
     }
     
     if(purchaseDone){
-      content = (<div className="flex flex-col justify-center items-center"><h3 className="text-center">Thank you {ticketHolder?.firstname}! You successfully purchased a {ticketHolder?.ticket} ticket!</h3>
-      
-      
+      content = (<div className="flex border-4 rounded-lg py-4 px-2 mx-2 flex-col justify-center items-center"><h3 className="text-center">Thank you {ticketHolder?.firstname}! You successfully purchased a {ticketHolder?.ticket} ticket!</h3>
+            
       <div className="flex justify-center mt-4">
         <button className="btn-primary" onClick={()=>setPurchaseDone(false)}>Buy more!</button></div>
-        </div>)
+      </div>)
     }
-
 
   return (
     <main>
@@ -117,7 +114,6 @@ const TicketsPage = () => {
           <Input type='text' inputId='ticket' labelText='Ticket' value={ticket} placeholder={ticket} className="py-1 px-2" readOnly/>
           <div className="btn-primary mt-4 mb-24"><Button>Buy</Button></div>
     </Form>
-
     
     </main>
   )

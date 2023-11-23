@@ -8,7 +8,7 @@ type ActivityProps = {
 
 const ActivityCard: FC<ActivityProps> = ({activityData}: ActivityProps)=> {
   
-    const {id, activity, image, description} = activityData;
+  const {id, activity, image, description} = activityData;
 
   return (
     <div key={id} className="max-w-sm min-w-[350px] rounded overflow-hidden shadow-lg bg-white m-4">

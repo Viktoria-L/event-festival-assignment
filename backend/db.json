@@ -9,7 +9,7 @@
         {
           "id": 1,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Eclipse Echo",
           "genre": "Techno",
           "performanceDate": "2023-06-12"
@@ -17,7 +17,7 @@
         {
           "id": 2,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Rhythm Pulse",
           "genre": "Techhouse",
           "performanceDate": "2023-06-13"
@@ -25,7 +25,7 @@
         {
           "id": 3,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Bass Voyager",
           "genre": "Trance",
           "performanceDate": "2023-06-14"
@@ -33,7 +33,7 @@
         {
           "id": 4,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Synth Harmonics",
           "genre": "Techno",
           "performanceDate": "2023-06-15"
@@ -41,7 +41,7 @@
         {
           "id": 5,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Melodic Waves",
           "genre": "Techhouse",
           "performanceDate": "2023-06-16"
@@ -49,7 +49,7 @@
         {
           "id": 6,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Beat Spectrum",
           "genre": "Trance",
           "performanceDate": "2023-06-17"
@@ -57,7 +57,7 @@
         {
           "id": 7,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Digital Mirage",
           "genre": "Techno",
           "performanceDate": "2023-06-18"
@@ -65,7 +65,7 @@
         {
           "id": 8,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Groove Matrix",
           "genre": "Techhouse",
           "performanceDate": "2023-06-19"
@@ -73,7 +73,7 @@
         {
           "id": 9,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Sonic Odyssey",
           "genre": "Trance",
           "performanceDate": "2023-06-20"
@@ -81,7 +81,7 @@
         {
           "id": 10,
           "type": "artist",
-          "image": "url",
+          "image": "http://localhost:3000/images/dj.png",
           "name": "Rave Synergy",
           "genre": "Techno",
           "performanceDate": "2023-06-21"
@@ -97,35 +97,35 @@
         {
           "id": 1,
           "type": "art",
-          "image": "url",
+          "image": "http://localhost:3000/images/artartist.png",
           "name": "Canvas Dreams",
           "style": "Abstract"
         },
         {
           "id": 2,
           "type": "art",
-          "image": "url",
+          "image": "http://localhost:3000/images/artartist.png",
           "name": "Color Rhythms",
           "style": "Modern"
         },
         {
           "id": 3,
           "type": "art",
-          "image": "url",
+          "image": "http://localhost:3000/images/artartist.png",
           "name": "Visionary Forms",
           "style": "Surrealist"
         },
         {
           "id": 4,
           "type": "art",
-          "image": "url",
+          "image": "http://localhost:3000/images/artartist.png",
           "name": "Sculptural Echoes",
           "style": "Installations"
         },
         {
           "id": 5,
           "type": "art",
-          "image": "url",
+          "image": "http://localhost:3000/images/artartist.png",
           "name": "Digital Mosaics",
           "style": "Digital Art"
         }
@@ -140,7 +140,7 @@
         {
           "id": 1,
           "type": "yoga",
-          "image": "url",
+          "image": "http://localhost:3000/images/yoga1.png",
           "name": "Sunrise Serenity",
           "style": "Vinyasa Yoga",
           "classDate": "2023-06-12"
@@ -148,7 +148,7 @@
         {
           "id": 2,
           "type": "yoga",
-          "image": "url",
+          "image": "http://localhost:3000/images/yoga1.png",
           "name": "Mindful Harmony",
           "style": "Hatha Yoga",
           "classDate": "2023-06-13"
@@ -156,7 +156,7 @@
         {
           "id": 3,
           "type": "yoga",
-          "image": "url",
+          "image": "http://localhost:3000/images/yoga1.png",
           "name": "Zen Echoes",
           "style": "Kundalini Yoga",
           "classDate": "2023-06-14"
@@ -164,7 +164,7 @@
         {
           "id": 4,
           "type": "yoga",
-          "image": "url",
+          "image": "http://localhost:3000/images/yoga1.png",
           "name": "Chakra Balance",
           "style": "Ashtanga Yoga",
           "classDate": "2023-06-15"
@@ -172,7 +172,7 @@
         {
           "id": 5,
           "type": "yoga",
-          "image": "url",
+          "image": "http://localhost:3000/images/yoga1.png",
           "name": "Inner Peace",
           "style": "Meditation",
           "classDate": "2023-06-16"
@@ -188,35 +188,35 @@
         {
           "id": 1,
           "type": "food",
-          "image": "url",
+          "image": "http://localhost:3000/images/foodstall.png",
           "name": "Global Bites",
           "cuisine": "International"
         },
         {
           "id": 2,
           "type": "food",
-          "image": "url",
+          "image": "http://localhost:3000/images/foodstall.png",
           "name": "Spice Trail",
           "cuisine": "Indian"
         },
         {
           "id": 3,
           "type": "food",
-          "image": "url",
+          "image": "http://localhost:3000/images/foodstall.png",
           "name": "Taste of Italy",
           "cuisine": "Italian"
         },
         {
           "id": 4,
           "type": "food",
-          "image": "url",
+          "image": "http://localhost:3000/images/foodstall.png",
           "name": "Sushi Fusion",
           "cuisine": "Japanese"
         },
         {
           "id": 5,
           "type": "food",
-          "image": "url",
+          "image": "http://localhost:3000/images/foodstall.png",
           "name": "Green Garden",
           "cuisine": "Vegan"
         }
@@ -231,7 +231,7 @@
         {
           "id": 1,
           "type": "market",
-          "image": "url",
+          "image": "http://localhost:3000/images/market.png",
           "name": "Artisan Wonders",
           "description": "A collection of handcrafted items from local artisans."
         }
@@ -246,7 +246,7 @@
         {
           "id": 1,
           "type": "chill",
-          "image": "url",
+          "image": "http://localhost:3000/images/relax.png",
           "name": "Forest Retreat",
           "description": "A tranquil spot amidst the trees for relaxation."
         }
@@ -286,82 +286,6 @@
     }
   ],
   "tickets": [
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "Day Pass",
-      "id": 8
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "VIP",
-      "id": 9
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "VIP",
-      "id": 25
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "Day Pass",
-      "id": 26
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "General Admission",
-      "id": 27
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "Day Pass",
-      "id": 28
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "VIP",
-      "id": 29
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "Day Pass",
-      "id": 30
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "VIP",
-      "id": 31
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "General Admission",
-      "id": 32
-    },
-    {
-      "firstname": "Viktoria",
-      "lastname": "Lindberg",
-      "email": "viktorial86@hotmail.com",
-      "ticket": "VIP",
-      "id": 33
-    }
+
   ]
 }

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { GiAbstract116 } from "react-icons/gi";
 
-
 const Footer = () => {
   return (
     <footer className="bg-black mt-auto w-full mx-auto p-4 md:py-4 text-center">           
@@ -13,7 +12,7 @@ const Footer = () => {
                             <GiAbstract116 />
                         </span>
                 </div>
-                <hr className="my-6 border-gray-900 sm:mx-autolg:my-8" />
+                <hr className="my-6 border-green-900 sm:mx-autolg:my-8" />
                 <span className="block text-sm text-white sm:text-center">© 2023 <a href="" className="hover:underline">Echoes Of Shanti™</a>. All Rights Reserved.</span>
     </footer>
   )

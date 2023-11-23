@@ -53,7 +53,7 @@ let content: ReactNode;
   //Byt header rubrik här nedan
     return (
     <main>
-          <h1 className='my-12 font-bold text-3xl text-center'>Info</h1>
+          <h1 className='mt-12 mb-8 font-bold text-3xl text-center'>Program Info</h1>
           <p className="text-center">Echoes Of Shanti festival has a lot to offer!</p>
           <p className="text-center">Don't miss out on this magical weekend, making new memories!</p> 
         {content}

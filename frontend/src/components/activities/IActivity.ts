@@ -58,7 +58,7 @@ export interface Market extends ItemsBase {
 }
   
   // Unionstyp som representerar alla möjliga items-typer
-  export type Items = Artists | ArtExhibitor | Food | Yoga | Chill; // Lägg till andra feature-typer med | operatorn
+  export type Items = Artists | ArtExhibitor | Food | Yoga | Chill | Market; // Lägg till andra feature-typer med | operatorn
   
 
   

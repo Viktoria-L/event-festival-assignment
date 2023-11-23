@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="flex space-x-4">
             {/* Logo eller ikon för små skärmar */}
             <div className="flex items-center text-white text-lg">
-              <GiAbstract116 className="md:hidden text-3xl"/>
+              <NavLink to="/"><GiAbstract116 className="md:hidden text-3xl"/></NavLink>
             </div>
 
             {/* Huvudmeny */}

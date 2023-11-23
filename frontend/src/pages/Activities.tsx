@@ -35,12 +35,10 @@ const Activities = () => {
   if(activities){
     content = (
       <>
-      <p className='text-center'>Here you can explore all the activities on the festival grounds.</p>
-      <div className='flex flex-wrap justify-center gap-8 my-12'>
+      <p className='text-center'>Here you can explore all the different activities on the festival grounds.</p>
+      <div className='flex flex-wrap justify-center gap-8 my-12 max-w-[1500px] items-center'>
         {activities.map((activity) => 
-        <ActivityCard activityData={activity}/>)}
-      
-      
+        <ActivityCard activityData={activity} key={activity.id}/>)}           
       </div>
       </>
       )
@@ -60,7 +58,9 @@ const Activities = () => {
   return (
     <main className=''>
       <h1 className='my-12 font-bold text-3xl text-center'>Program</h1>
+    <div className='w-full flex flex-col justify-center items-center'>
     {content}
+    </div>
     </main>
   )
 }

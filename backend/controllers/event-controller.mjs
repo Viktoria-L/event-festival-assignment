@@ -2,13 +2,11 @@ import { fetchData, addData } from '../utils/http.mjs';
 
 const listActivities = async (req, res) => {
   const response = await fetchData('activities');
-  console.log("från listactivites", response)
   res.status(200).json(response);
 };
 
 const getActivity = async (req, res) => {
   const id = req.params.id;
-  console.log("kolla id", id)
   const response = await fetchData("activities/",id);
   res.status(200).json(response);
 };
@@ -22,12 +20,11 @@ const addTicket = async (req, res) => {
   } else {
     return res.status(500).json(response);
   }
-  console.log(response);
 };
+
 
 const getTickets = async (req, res) => {
   const response = await fetchData('ticketType');
-  console.log("från ticketType", response)
   res.status(200).json(response);
 };
 

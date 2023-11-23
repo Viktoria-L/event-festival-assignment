@@ -24,39 +24,33 @@ const ContactForm = () => {
             message:message.current!.value,
         };
 
-//Som nedan gör man kanske normalt sett men inte i typescript
-        //const enteredFirstName = firstName.current!.value;
 
         e.currentTarget.reset()
-
-        //Informationen skickas till vår databas eller 
-        // till mottagaren via ett mail api...
         console.log(customer);
     }
-    
-    //const value = firstName.current!.value;
+
 
   return (
     <form onSubmit={handleSubmit}>
             <div className='form-control'>
-              <label htmlFor='firstName'>Förnamn</label>
+              <label htmlFor='firstName'>Firstname</label>
               <input ref={firstName} type='text' name='firstName' id='firstName' />
             </div>
             <div className='form-control'>
-              <label htmlFor='lastName'>Efternamn</label>
+              <label htmlFor='lastName'>Lastname</label>
               <input ref={lastName} type='text' name='lastName' id='lastName' />
             </div>
             <div className='form-control'>
-              <label htmlFor='email'>E-Post</label>
+              <label htmlFor='email'>E-mail</label>
               <input ref={email} type='email' name='email' id='email' />
             </div>
             <div className='form-control'>
-              <label htmlFor='message'>Meddelande</label>
+              <label htmlFor='message'>Message</label>
               <textarea ref={message} name='message' id='message' cols={30} rows={10}></textarea>
             </div>
-            <div className='submit-controls'>
-              <button className='btn' type='submit'>
-                Skicka
+            <div className='submit-controls flex justify-center'>
+              <button className='btn-primary' type='submit'>
+                Send
               </button>
             </div>
     </form>

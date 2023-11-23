@@ -36,3 +36,46 @@ select:-webkit-autofill:focus {
 background-color: #1b6c3a;
 transition: background-color 5000s ease-in-out 0s;
 }
+
+
+
+
+
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px var(--text-color-dark);
+}
+
+#contact-form textarea {
+  height: 12.5rem;
+  color: black;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none !important;
+}
+
+/* Media Queries */
+/* min-width: 768px */
+@media (min-width: 768px) {
+  #contact-form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #contact-form .btn {
+    width: 50%;
+  }
+
+  #contact-info > div {
+    display: flex;
+    justify-content: space-around;
+  }
+  #contact-info .box {
+    border-bottom: none;
+  }
+}
